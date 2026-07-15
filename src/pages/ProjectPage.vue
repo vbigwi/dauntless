@@ -147,6 +147,27 @@ const solutionPoints = [
             </p>
           </div>
         </div>
+
+        <RouterLink
+          to="/prototype"
+          class="brut-card group mt-10 flex flex-col items-start gap-5 overflow-hidden bg-blue p-6 transition-transform duration-150 hover:-translate-y-1 sm:flex-row sm:items-center sm:justify-between sm:p-8"
+        >
+          <div>
+            <span class="brut-tag -rotate-1 inline-flex bg-yellow">It's built</span>
+            <p class="mt-3 font-display text-xl font-black text-ink sm:text-2xl">
+              BODA-PAY has a working prototype — mobile app and web dashboard.
+            </p>
+            <p class="mt-2 max-w-lg text-sm leading-relaxed text-ink/70">
+              Tap through the wallet, send a payment, and watch the corridor dashboard update live.
+            </p>
+          </div>
+          <span class="brut-btn shrink-0 !bg-ink !text-cream">
+            View the prototype
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </RouterLink>
       </div>
     </section>
   </div>

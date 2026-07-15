@@ -11,6 +11,7 @@ const links = [
   { to: '/culture', label: 'Culture' },
   { to: '/community', label: 'Community' },
   { to: '/project', label: 'Project' },
+  { to: '/prototype', label: 'Prototype' },
   { to: '/journey', label: 'Journey' },
 ]
 
@@ -30,7 +31,7 @@ function close() {
         <span class="font-display text-lg font-extrabold tracking-tight text-ink">Dauntless</span>
       </RouterLink>
 
-      <nav class="hidden items-center gap-1 md:flex">
+      <nav class="hidden items-center gap-1 lg:flex">
         <RouterLink
           v-for="link in links"
           :key="link.to"
@@ -44,7 +45,7 @@ function close() {
         </RouterLink>
       </nav>
 
-      <RouterLink to="/journey" class="brut-btn hidden !bg-pink md:inline-flex">
+      <RouterLink to="/journey" class="brut-btn hidden !bg-pink lg:inline-flex">
         Our Journey
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
           <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
@@ -52,7 +53,7 @@ function close() {
       </RouterLink>
 
       <button
-        class="flex h-10 w-10 items-center justify-center rounded-lg border-[3px] border-ink bg-paper text-ink md:hidden"
+        class="flex h-10 w-10 items-center justify-center rounded-lg border-[3px] border-ink bg-paper text-ink lg:hidden"
         style="box-shadow: var(--shadow-brut-sm)"
         aria-label="Toggle navigation menu"
         @click="open = !open"
@@ -76,7 +77,7 @@ function close() {
     >
       <div
         v-if="open"
-        class="border-t-[3px] border-ink bg-paper p-3 md:hidden"
+        class="border-t-[3px] border-ink bg-paper p-3 lg:hidden"
       >
         <RouterLink
           v-for="link in links"

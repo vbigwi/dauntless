@@ -34,6 +34,13 @@ const directory = [
     color: 'bg-green',
   },
   {
+    to: '/prototype',
+    label: 'Prototype',
+    desc: 'The BODA-PAY app and dashboard — tap through it yourself.',
+    icon: 'phone',
+    color: 'bg-pink',
+  },
+  {
     to: '/journey',
     label: 'Full Journey',
     desc: 'All six E-Lab challenges, documented end to end.',
@@ -164,6 +171,7 @@ const directory = [
               <svg v-else-if="item.icon === 'globe'" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18Z" /></svg>
               <svg v-else-if="item.icon === 'hands'" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 12h4.5a1.5 1.5 0 0 0 0-3H12l-3-2-5 3v5l4 3 4-1" stroke-linejoin="round" /></svg>
               <svg v-else-if="item.icon === 'rocket'" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z" /><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 19 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z" /></svg>
+              <svg v-else-if="item.icon === 'phone'" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="7" y="2" width="10" height="20" rx="2" /><path d="M11 18h2" stroke-linecap="round" /></svg>
               <svg v-else width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 20l-5-2V6l5-2 6 2 5-2v14l-5 2-6-2Z" stroke-linejoin="round" /><path d="M9 4v14M15 6v14" /></svg>
             </div>
             <p class="font-display font-bold text-ink">{{ item.label }}</p>
