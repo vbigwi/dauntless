@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Geist Mono", ui-monospace, monospace;
+  --font-sans: "Geist Mono", ui-monospace, monospace;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  --color-ink: #121212;
+  --color-ink-700: #2b2b2b;
+
+  --color-paper: #fffdf7;
+  --color-cream: #fbf3df;
+  --color-yellow: #ffd23f;
+  --color-yellow-dim: #f5c322;
+  --color-blue: #3fc6e0;
+  --color-pink: #ff6f91;
+  --color-green: #9be564;
+
+  --shadow-brut-sm: 3px 3px 0 0 var(--color-ink);
+  --shadow-brut: 5px 5px 0 0 var(--color-ink);
+  --shadow-brut-lg: 8px 8px 0 0 var(--color-ink);
+  --shadow-brut-press: 2px 2px 0 0 var(--color-ink);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-wiggle: wiggle 6s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-ink text-yellow;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .brut-card {
+    @apply rounded-2xl border-[3px] border-ink bg-paper;
+    box-shadow: var(--shadow-brut);
+  }
+
+  .brut-btn {
+    @apply inline-flex items-center gap-2 rounded-xl border-[3px] border-ink bg-yellow px-5 py-3 text-sm font-bold text-ink transition-all duration-100;
+    box-shadow: var(--shadow-brut);
+  }
+  .brut-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: var(--shadow-brut-lg);
+  }
+  .brut-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: var(--shadow-brut-press);
+  }
+
+  .brut-tag {
+    @apply inline-flex items-center gap-1.5 rounded-lg border-[3px] border-ink bg-paper px-2.5 py-1 font-mono text-xs font-bold uppercase tracking-wide text-ink;
+    box-shadow: var(--shadow-brut-sm);
+  }
+
+  .brut-hatch {
+    background-image: repeating-linear-gradient(135deg, rgba(18, 18, 18, 0.06) 0 2px, transparent 2px 12px);
+  }
+}
