@@ -199,8 +199,16 @@ const directory = [
             </RouterLink>
           </div>
           <div class="flex flex-wrap justify-center gap-4 lg:justify-end">
+            <img
+              v-for="m in team.filter((m) => m.photo)"
+              :key="m.name"
+              :src="m.photo"
+              :alt="m.name"
+              :title="m.name"
+              class="h-16 w-16 rounded-full border-[3px] border-ink object-cover sm:h-20 sm:w-20"
+            />
             <div
-              v-for="m in team"
+              v-for="m in team.filter((m) => !m.photo)"
               :key="m.name"
               class="flex h-16 w-16 items-center justify-center rounded-full border-[3px] border-ink font-display text-sm font-black text-ink sm:h-20 sm:w-20"
               :style="{ background: m.color }"
